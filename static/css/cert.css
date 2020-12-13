@@ -1,0 +1,29 @@
+#cert{
+  width: 100%;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 100px;
+  text-align: left;
+  padding: 0 150px;
+}
+
+#cert > h1{
+  font-size: 80px;
+  text-shadow: -0.05em -0.05em 0 rgba(61, 125, 136, .67), 0.05em 0.05em 0 rgba(59, 206, 175, .19);
+}
+
+@media screen and (max-width: 1000px) {
+  #cert{
+      padding: 0 10px;
+  }
+
+  #cert > h1{
+    font-size: 60px;
+  }
+
+  #cert > ul > li {
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #8AB1B7;
+  }
+}

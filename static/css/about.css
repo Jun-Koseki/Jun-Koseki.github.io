@@ -1,0 +1,126 @@
+.top{
+  width: 100%;
+
+}
+
+.top > h1{
+  font-size: 100px;
+  opacity: 0;
+  animation: drop-up 1000ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  color: #58B3C3;
+}
+
+.top > h3{
+  color: #58B3C3;
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+}
+
+.top .text-1 {
+    animation: drop-down 1000ms;
+    animation-delay: 150ms;
+    animation-fill-mode: forwards;
+}
+
+.top .text-2 {
+    animation: drop-down 1000ms;
+    animation-delay: 250ms;
+    animation-fill-mode: forwards;
+}
+
+.top .text-3 {
+    animation: drop-down 1000ms;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+}
+
+.picture{
+  width: 100%;
+  height: 500px;
+  background: url(../images/about.png) no-repeat center;
+  background-size: contain;
+}
+
+.about-me {
+  margin: 50px 0 0 0;
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+
+.about-me > .list > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-me > .list > ul > p {
+  color: #3D7D88;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+
+.about-me > .list > ul > li {
+  font-size: 26px;
+  margin: 0 0 60px 0;
+  padding: 0 0 0 30px;
+  color: #8AB1B7;
+  border-bottom: 3px solid #1E3E44;
+}
+
+.about-text, .skill-image {
+    opacity: 0;
+    animation: drop-up 1000ms;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+    float: left;
+    height: 100%;
+}
+
+.about-image, .skill-text {
+    float: left;
+    width: 30%;
+    height: 100%;
+    opacity: 0;
+    animation: drop-up 1000ms;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+}
+
+.about .about-text h3{
+    color: #47767E;
+}
+
+@media screen and (max-width: 1000px) {
+  .top > h1{
+    font-size: 70px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .picture {
+    width: 100%;
+    height: 260px;
+    background-size: contain;
+  }
+  .top > h1{
+
+    text-align: center;
+  }
+
+  .top > h3{
+    color: #58B3C3;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .description{
+    text-align: center;
+  }
+
+}

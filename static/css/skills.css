@@ -1,0 +1,140 @@
+#skills{
+  width: 100%;
+  flex-wrap: wrap;
+  position: relative;
+  text-align: left;
+  padding: 0 150px;
+}
+
+#skills > h1{
+  font-size: 80px;
+  text-shadow: -0.05em -0.05em 0 rgba(61, 125, 136, .67), 0.05em 0.05em 0 rgba(59, 206, 175, .19);
+}
+
+#skills > h2{
+  font-size: 50px;
+  color: #3D7D88;
+}
+#skills > h2 > i{
+  margin: 20px;
+}
+
+.cube-wrap {
+  position: relative;
+  margin: 0 auto;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  width: 50%;
+  z-index: -1111;
+}
+
+.skill-cube {
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+}
+
+.skill-cube > div {
+    position: absolute;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    color: #ffffff;
+    transition: transform 0.2s ease-in;
+}
+
+.skill-front {
+  transform: translateZ(150px);
+}
+
+.skill-back {
+  transform: translateZ(-150px) rotateY(180deg);
+}
+
+.skill-right {
+  transform: rotateY(-270deg) translateX(150px);
+  transform-origin: top right;
+}
+
+.skill-left {
+  transform: rotateY(270deg) translateX(-150px);
+  transform-origin: center left;
+}
+
+.skill-top {
+  transform: rotateX(-270deg) translateY(-150px);
+  transform-origin: top center;
+}
+
+.skill-bottom {
+  transform: rotateX(270deg) translateY(150px);
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.skill-cube {
+  animation: rotate 20s infinite linear;
+}
+
+
+.wrap:hover .front {
+  transform: translateZ(200px);
+}
+
+.wrap:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+@media screen and (max-width: 1000px) {
+  #skills{
+      padding: 0 10px;
+  }
+
+  #skills > h1{
+    font-size: 60px;
+  }
+
+  #skills > h2{
+    font-size: 40px;
+  }
+
+  #skills > ul > li {
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #8AB1B7;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cube-wrap{
+    display: none;
+  }
+}
